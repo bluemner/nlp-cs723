@@ -1,3 +1,6 @@
+"""
+	Plan text corpus reader 
+"""
 import nltk
 nltk.data.path.append("L:\\nltk_data")
 
