@@ -15,4 +15,3 @@ grammer =  "coordination:{<NNP><CC><NNP>+| <DT>?<PRP\$><NNS><CC><NNS>| <NN><NNS>
 cp = nltk.RegexpParser(grammer)
 result= cp.parse(sentence)
 print (result)
-

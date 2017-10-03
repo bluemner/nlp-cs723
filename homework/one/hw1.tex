@@ -47,20 +47,30 @@ tagged}
 \subsection{(d) PRP VBP DT NN VBG IN NNP}
 ``You enjoy any building running in Milwaukee''
 
-\section{MS SPLAT parser gets it wrong.}
+\section{}
 \subsection{``The poor can can can the tomatoes."}
 DT JJ MD VB NN DT NNS
-part 2 
+\subsection{}
+
+1)Can you text text? \\
+site:
+[["MD","PRP","NN","NN","."]]
 \\
-Can you text text?
-\\
-[["MD","PRP","NN","NN","."]]s
 what is should be:
 [["MD","PRP","VB","NN","."]]
-text is the main verb in the sentence, 
-the system is getting tripped up because 
-the two words text text are next to each other.
+\\
+The first text in the sentence should be a verb, it appears that when two of the same words are next to each other
+\\
+2) The fish shop is small.
+site:
+[["DT","NN","NN","VBZ","JJ","."]]
+\\
+what it should be 
+[["DT","JJ","NN","VBZ","JJ","."]]
+\\
+fish in this case is an adjective which describes the shop
 
+\section{}
 The archer having fired his bow took a bow on the bow of a ship floating in the Bow river.
  All during that time a computer programing that calculates 
  different types of trajectories required a user to type
@@ -73,13 +83,13 @@ The archer having fired his bow took a bow on the bow of a ship floating in the 
 
 \begin{tabular}{ | l | l | l | l | }
 	\hline
-	Word & Total Occurences & Total Tags & Distribution\\\hline
+	Word & Total Occurrences & Total Tags & Distribution\\\hline
 	be & 5 & 3 & VB:1 VBD:2 VBN 2 \\\hline
 	bow & 4 & 3 & NN:2 VB:1 NNP:1\\\hline
 	type & 3 & 3 & VB:1  NNS:1 NN:1\\\hline
 	\end{tabular}
 
-\cite{*}
+\cite{Cat_Tag_Words}
 \bibliographystyle{unsrt}
 \bibliography{bib}
 

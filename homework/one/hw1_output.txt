@@ -1,0 +1,24 @@
+ShowExample
+	'that' => WPO: him : `` I have never mentioned a new artist THAT Thompson didn't know about '' . He might barge into
+ShowExample
+	'that' => CS: of Atlanta's recent primary election produced `` no evidence '' THAT any irregularities took place . The jury further said in
+ShowExample
+	'that' => WPS: charge Jan. 1 the airport be operated in a manner THAT will eliminate political influences '' . The jury did not
+ShowExample
+	'that' => QL: Legislative Council might perform the review , Mr. Notte said THAT instead he will take up the matter with Atty. Gen.
+ShowExample
+	'that' => DT: of Cook county , altho vindication of the authority of THAT court is not the function of this court '' ,
+ShowExample
+	'top' => JJS: enter a candidate in the 1962 governor's race , a TOP official said Wednesday . Robert Snodgrass , state GOP chairman
+ShowExample
+	'top' => VB: dealers are optimistic that the April-June quarter will equal or TOP last year . The March gain plus this optimism has
+ShowExample
+	'top' => NN: of 5 to 3 . Indications as late as the TOP of the sixth were that the Birds were to end
+ShowExample
+	'the' => AT: place . The jury further said in term-end presentments that THE City Executive Committee , which had over-all charge of the
+ShowExample
+	'the' => AT-TL: permitting older ones to attend the residential Texas School for THE Deaf here . Operating budget for the day schools in
+ShowExample
+	'the' => AT-HL: will take a wedding trip later . ' back with THE Met `` We are back with the ' Met '
+ShowExample
+	'Rosburg' => NP: to an early lead , which he shared with Bob ROSBURG . But Player was only one stroke back , with
