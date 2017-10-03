@@ -24,15 +24,3 @@ cp = nltk.RegexpParser(grammer)
 result= cp.parse(sentence)
 print (result)
 
-'''
-July/NNP and/CC August/NNP, all/DT your/PRP$ managers/NNS
- and/CC supervisors/NNS,company/NN courts/NNS and/CC adjudicators/NNS
-'''
-sentence=pos_sentence("July and Augest all your managers and supervisors company courts and adjudicators")
-grammer =  "coordination:{<NNP><CC><NNP>+| <DT>?<PRP\$><NNS><CC><NNS>| <NN><NNS>+<CC><NNS> }" 
-
-
-cp = nltk.RegexpParser(grammer)
-result= cp.parse(sentence)
-print (result)
-

@@ -34,7 +34,7 @@ def GetAmbiguousWords(corpus, N=0):
         word_dict[word].add(tag)
     filtered_words = [(word, tag)
                        for (word, tag) in corpus if len(word_dict[word]) > N]
-
+    #print(filtered_words)
     return nltk.ConditionalFreqDist(filtered_words);
 
 
@@ -61,11 +61,14 @@ def ShowExample(word, cfd, corpus):
     return ' ';
 
 # %%
-corpus=GetCorpus(nltk.corpus.brown, 'news')
-# print(corpus)
-cfd=GetAmbiguousWords(corpus)
+
+corpus=GetCorpus(nltk.corpus.brown, ['news','religion'])
+
+cfd=GetAmbiguousWords(corpus,0)
+print(cfd);
 test=TestGetAmbiguousWords(cfd, 1)
-ShowExample('book', cfd, corpus)
-ShowExample('news', cfd, corpus)
-print(cfd)
 print(test)
+ShowExample('that',cfd, corpus)
+ShowExample('top', cfd, corpus) # 3
+ShowExample('the', cfd, corpus) # 3
+ShowExample('Rosburg', cfd, corpus)

@@ -1,0 +1,8 @@
+(a) PRP VBP DT NN IN NNP
+	I drank some beer in Milwaukee
+(b) VBZ DT NN VB JJ NNS
+	Views the game capture dark knights
+(c) MD PRP VB DT JJS NN NNS
+	Can you repeat all greatest tech books
+(d) PRP VBP DT NN VBG IN NNP
+	You enjoy any building running in Milwaukee

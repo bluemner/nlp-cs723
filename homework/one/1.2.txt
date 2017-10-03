@@ -1,0 +1,21 @@
+(a) It is also wrong for "The poor can can can the tomatoes." Tell me what the correct sequence
+of tags should be, given a correct reading as a sentence. (Hint: use a good online dictionary like
+this one: dictionary.cambridge.org/dictionary/english
+
+DT JJ MD VB NN DT NNS
+
+(b)Provide two more example sentences where SPLAT POS tagger gives the wrong tags and justify
+your answer.
+	1) Can you text text?
+		Site
+		[["MD","PRP","NN","NN","."]]
+		what is should be:
+		[["MD","PRP","VB","NN","."]]
+		The first text in the sentence should be a verb, it appears that when two of the same words are next to each other.
+
+	2) The fish shop is small.
+		site:
+		[["DT","NN","NN","VBZ","JJ","."]]
+		what it should be 
+		[["DT","JJ","NN","VBZ","JJ","."]]
+		fish in this case is an adjective which describes the shop
