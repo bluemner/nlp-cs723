@@ -1,0 +1,25 @@
+(S
+  (NP (DT the) (NNS pastures))
+  (VP
+    (VP (VBD climbed) (NP (DT the) (NN hill)))
+    (CC and)
+    (VP
+      (VBD disappeared)
+      (PP
+        (PP (IN over) (PP (DT the) (JJ top)))
+        (PP
+          (IN toward)
+          (NP (DT the) (ADJP (JJ wonderful) (JJ wide)) (NN sky)))))))(S
+  (NP (DT the) (NNS pastures))
+  (VP
+    (VP (VBD climbed) (NP (DT the) (NN hill)))
+    (CC and)
+    (VP
+      (VBD disappeared)
+      (PP
+        (IN over)
+        (PP
+          (PP (DT the) (JJ top))
+          (PP
+            (IN toward)
+            (NP (DT the) (ADJP (JJ wonderful) (JJ wide)) (NN sky))))))))
