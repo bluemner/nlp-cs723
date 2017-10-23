@@ -1,0 +1,136 @@
+
+ 1st parsed sentence: (S
+  (NP-SBJ
+    (NP (NNP Pierre) (NNP Vinken))
+    (, ,)
+    (ADJP (NP (CD 61) (NNS years)) (JJ old))
+    (, ,))
+  (VP
+    (MD will)
+    (VP
+      (VB join)
+      (NP (DT the) (NN board))
+      (PP-CLR (IN as) (NP (DT a) (JJ nonexecutive) (NN director)))
+      (NP-TMP (NNP Nov.) (CD 29))))
+  (. .)) 
+
+ Productions in the 1st parsed sentence: 
+[S -> NP-SBJ VP .,
+ NP-SBJ -> NP , ADJP ,,
+ NP -> NNP NNP,
+ NNP -> 'Pierre',
+ NNP -> 'Vinken',
+ , -> ',',
+ ADJP -> NP JJ,
+ NP -> CD NNS,
+ CD -> '61',
+ NNS -> 'years',
+ JJ -> 'old',
+ , -> ',',
+ VP -> MD VP,
+ MD -> 'will',
+ VP -> VB NP PP-CLR NP-TMP,
+ VB -> 'join',
+ NP -> DT NN,
+ DT -> 'the',
+ NN -> 'board',
+ PP-CLR -> IN NP,
+ IN -> 'as',
+ NP -> DT JJ NN,
+ DT -> 'a',
+ JJ -> 'nonexecutive',
+ NN -> 'director',
+ NP-TMP -> NNP CD,
+ NNP -> 'Nov.',
+ CD -> '29',
+ . -> '.']
+-------------------------------------------------------
+The sentence:he ate salad
+
+****
+(S (NP (Pro he)) (VP (Vt ate) (NP (N salad)))) (p=0.00057915)10.75(10.75)
+****
+1 total parses found
+-------------------------------------------------------
+-------------------------------------------------------
+The sentence:he ate salad with mushrooms
+
+****
+(S
+  (NP (Pro he))
+  (VP
+    (Vt ate)
+    (NP (NP (N salad)) (PP (Prep with) (N mushrooms))))) (p=1.98069e-06)18.95(18.95)
+****
+****
+(S
+  (NP (Pro he))
+  (VP
+    (VP (Vt ate) (NP (N salad)))
+    (PP (Prep with) (N mushrooms)))) (p=9.90346e-07)19.95(19.95)
+****
+2 total parses found
+-------------------------------------------------------
+-------------------------------------------------------
+The sentence:he ate salad with a fork
+
+****
+(S
+  (NP (Pro he))
+  (VP
+    (Vt ate)
+    (NP
+      (NP (N salad))
+      (PP (Prep with) (Det (Art a)) (N fork))))) (p=2.08494e-08)25.52(25.52)
+****
+****
+(S
+  (NP (Pro he))
+  (VP
+    (VP (Vt ate) (NP (N salad)))
+    (PP (Prep with) (Det (Art a)) (N fork)))) (p=1.04247e-08)26.52(26.52)
+****
+2 total parses found
+-------------------------------------------------------
+-------------------------------------------------------
+The sentence:eat the salad
+
+****
+(S (VP (Vt eat) (NP (Det (Art the)) (N salad)))) (p=5.85e-05)14.06(14.06)
+****
+1 total parses found
+-------------------------------------------------------
+-------------------------------------------------------
+The sentence:I read her the book
+
+****
+(S
+  (NP (Pro I))
+  (VP
+    (Vt read)
+    (Pro_obj her)
+    (NP (Det (Art the)) (N book)))) (p=4.455e-07)21.1(21.1)
+****
+1 total parses found
+-------------------------------------------------------
+-------------------------------------------------------
+The sentence:I read she the book
+
+0 total parses found
+-------------------------------------------------------
+-------------------------------------------------------
+The sentence:the book was read to her
+
+****
+(S
+  (NP (Det (Art the)) (N book))
+  (VP
+    (VP (Vi was))
+    (VP (Vt read) (PP (Prep to) (Pro_obj her))))) (p=1.782e-09)29.06(29.06)
+****
+1 total parses found
+-------------------------------------------------------
+-------------------------------------------------------
+The sentence:I read the book to she
+0 total parses found
+-------------------------------------------------------
