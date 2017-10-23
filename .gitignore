@@ -100,3 +100,5 @@ ENV/
 
 #vs code
 .vscode/
+
+*.zip
