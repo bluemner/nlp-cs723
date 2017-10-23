@@ -11,23 +11,11 @@ from fixesNLTK3 import *
 from BetterICP import *
 from nltk import InsideChartParser
 
-from __future__ import division
-import sys
-from pprint import pprint
-from collections import defaultdict
-import nltk
-#nltk file on my L drive
-nltk.data.path.append("L:\\nltk_data\\")
-from nltk.corpus import treebank
-from nltk import ConditionalFreqDist, Nonterminal, FreqDist
-from fixesNLTK3 import *
-from BetterICP import *
-from nltk import InsideChartParser
-
 ## Main body of code ##
 # Extracting tagged sentences using NLTK libraries
 psents = treebank.parsed_sents()
-# Comment out the following 3 lines if you get tired of seeing them
+print(psents)
+# Comment out the following 3 lines if you get tired ofc seeing them
 print ("\n 1st parsed sentence: {} \n".format(psents[0]))
 print ("\n Productions in the 1st parsed sentence: \n")
 pprint(psents[0].productions())
@@ -76,4 +64,3 @@ ppc.trace(3)
 ppc.beam(1200)
 print ("beam = 1200")
 ppc.parse("the men".split(),True,3)
-
