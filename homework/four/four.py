@@ -2,6 +2,7 @@
 from nltk.chat.util import Chat, reflections
 from enum import Enum
 import calendar
+from datetime import datetime
 class Activity(Enum):
     Banquet = 1
     Concert = 2
@@ -73,20 +74,38 @@ class Request_System:
     def __init__(self):
         union = Union()
 
-    def approve_request():
+    def approve_request(request_id):
         temp_request = Venue_Request()
-        for m in accecpted_venue_requests:
-            
-    def submite_request():
-    
-    def check_venue(venue,start,end):
+        for m in pending_venue_requests:
+            if request_id == m.id:
+                accecpted_venue_requests.append(m)
+                pending_venue_requests.remove(m)
+                break
+    def validate(date):
+        try:
+            return datetime.datetime.strptime(date, '%Y-%m-%d')
+        except ValueError:
+            raise ValueError("Incorrect data format, should be YYYY-MM-DD")
+        return datatime.datatime.now
+    def free_rooms(date_text):
+        date = validate(date_text)
+        return [m for m in accecpted_venue_requests if m.start > date and m.end < date ]
         
+    def submit_request():
+        pass
+    def check_venue(venue,start,end):
+        pass
+#############################
 
 
+req_system = Request_System()
 
 def room_info():
     return "Here is the room info"
-command_list = '''
+
+def help(name):
+    #need_room_regex = r'(.*)(need a room)'
+    command_list = '''
                Welcome to the room request utility
                Can I help you will the following:
                     * Request a room
@@ -94,9 +113,7 @@ command_list = '''
                     * View information about a request
                     * Room information
                '''
-def help(name):
-    need_room_regex = r'(.*)(need a room)'
-    return 
+    return command_list
 pairs = [
     [
         r'hi',
@@ -113,10 +130,16 @@ pairs = [
             help("%1 %2")
         ]
     ],
-        [
+    [
         r'(.*)(room info+)',
         [
             room_info()
+        ]
+    ],
+    [
+        r'(.*)(available rooms|free rooms)(.*)',
+        [
+            req_system.free_rooms("%3")
         ]
     ],
     [r'(.*)(are you a robot.*)',
