@@ -22,7 +22,7 @@ class Test_Request_System(unittest.TestCase):
 		result = self.req_sys.check_venue(
 			Union.venues[0],
 			start + timedelta(hours=2),
-			start + timedelta(hours=10)
+			start + timedelta(hours=2.5)
 			)
 		self.assertFalse(result)
 	def test_check_good_date_out_of_rage(self):
