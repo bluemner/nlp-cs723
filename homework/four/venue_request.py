@@ -10,7 +10,9 @@ class Activity(Enum):
     Dance_or_Party = 7
     Reception = 8
     Other = 9
-	
+'''
+    Venue request will allow user to submit a request
+'''
 class Venue_Request:
     id = None
     venue = None
