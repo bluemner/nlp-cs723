@@ -44,7 +44,14 @@ class Test_Request_System(unittest.TestCase):
 			start + timedelta(hours=30)
 			)
 		self.assertTrue(result)
-
+	def test_convert_text_to_date(self):
+		actual = self.req_sys.convert_text_to_date('12/12/1992')
+		expected = datetime.strptime('12/12/1992', "%d/%m/%Y")
+		self.assertEqual(actual,expected)
+	def test_convert_text_to_date_2_diget_year(self):
+		actual = self.req_sys.convert_text_to_date('12/12/92')
+		expected = datetime.strptime('12/12/92', "%d/%m/%y")
+		self.assertEqual(actual,expected)
 	def test_view_request(self):
 		start = datetime.strptime('01/01/2018', "%d/%m/%Y")
 		
