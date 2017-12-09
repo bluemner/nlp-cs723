@@ -18,7 +18,7 @@ class Union:
     def get_venue_list(self):
         return [m.name for m in self.venues ]
     def get_room_count(self):
-        return len(self.venues)    
+        return len(self.venues))
     def get_venue_by_name(name):
         high =-1
         for m in venues:
