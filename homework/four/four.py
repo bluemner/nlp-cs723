@@ -16,7 +16,7 @@ requst_free_venue_date_reg =  r'(.*)?(venue|rooms|venues) (available|free|open|e
 free_room_date_reg =  r'(.*)?(available|free|open|empty) (venue|rooms|venues) ('+YEAR_MONTH_DAY_REG+')?'
 
 def parse_venue_request(venue,start,end,activity):
-     
+     venue_id = req_system.union.get_venue_by_name(venue)
      req_system.submit_request(venue_id,start,end,activity)
 def help(name):
     #need_room_regex = r'(.*)(need a room)'

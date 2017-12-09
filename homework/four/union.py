@@ -17,9 +17,16 @@ class Union:
             self.venues.append(Venue(i+9,m,6))
     def get_venue_list(self):
         return [m.name for m in self.venues ]
+
     def get_room_count(self):
-        return len(self.venues))
-    def get_venue_by_name(name):
-        high =-1
-        for m in venues:
-            difflib.SequenceMatcher(None,name,m.name).ratio() 
+        return len(self.venues)
+    
+    def get_venue_by_name(self,name):
+        high = -1
+        index = -1
+        for m in self.venues:
+            temp = difflib.SequenceMatcher(None,str(name),str(m.name)).ratio()
+            if temp > high and temp > .80 :
+                index = m.id
+                high=temp
+        return index
