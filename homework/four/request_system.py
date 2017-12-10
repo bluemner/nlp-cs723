@@ -21,17 +21,21 @@ class Request_System:
             return "Error processing request"
 
     def convert_text_to_date(self, date):
-        try:
-            return datetime.strptime(date, '%d/%m/%Y')
-        except ValueError:
-            pass
-        try: 
-            return datetime.strptime(date, '%d/%m/%y')
-        except ValueError:
-            pass
+        if date == None:
+            return ""
+        formats = ('%m/%d/%Y','%m/%d/%y')
+        for f in formats:
+            try:
+                return datetime.strptime(str(date), f)
+            except ValueError as e:
+                print(e)
+                continue
+    
         return datetime.now()
 
     def free_rooms(self, date_text):
+        if date_text == None:
+            return ""
         date = self.convert_text_to_date(date_text)
         rooms = self.union.venues #get_venue_list()
         not_free = [
@@ -39,7 +43,7 @@ class Request_System:
             if m.start > date and m.end < date
         ]
         if date_text != None or date_text.strip() != "" or date_text != '%2':
-            temp = "Rooms free on {}:\n".format(str(date.date))
+            temp = "Rooms free on {}:\n".format(str(date))
         else:
             temp = ""
         for m in [r for r in rooms if r not in not_free]:
