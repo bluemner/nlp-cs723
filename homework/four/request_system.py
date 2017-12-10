@@ -34,8 +34,8 @@ class Request_System:
         return datetime.now()
 
     def free_rooms(self, date_text):
-        if date_text == None:
-            return ""
+        if date_text == None or date_text == '%2' or date_text == '%4':
+            return "Error:" + date_text
         date = self.convert_text_to_date(date_text)
         rooms = self.union.venues #get_venue_list()
         not_free = [
